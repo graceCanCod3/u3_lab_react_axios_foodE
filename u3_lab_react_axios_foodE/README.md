@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=======
 ## SEBR 0429
 
 
@@ -26,3 +36,4 @@
 - Responsive styling to make the site Mobile friendly
 - use Context to pass our Searchbar's data through other components!
 - Anything else you can imagine!
+>>>>>>> 16978c54dc7c586de11f0f084c2de41000243179
