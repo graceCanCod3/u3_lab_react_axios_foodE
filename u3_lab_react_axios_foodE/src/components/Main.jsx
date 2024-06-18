@@ -9,7 +9,7 @@ export default function Main () {
             <Routes>
                 <Route path ="/" element = {<Home />}/>
                 <Route path ="/Seafood" element = {<Seafood />}/>
-                <Route path ="/Starter" element = {<Starter />}/>
+                <Route path ="/Starters" element = {<Starter />}/>
             </Routes>
         </div>
     )
