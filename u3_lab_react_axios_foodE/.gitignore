@@ -23,13 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-package-lock.json
-=======
-//package-lock.json
->>>>>>> 7f41e00127e9e79b37e5f4dcbc2d4b3eaba882ca
-=======
-//package-lock.json
 
->>>>>>> 83396701e16c299ce579e483f1d2a3d17faa4a0c
+package-lock.json
+package.json
+node_modules
