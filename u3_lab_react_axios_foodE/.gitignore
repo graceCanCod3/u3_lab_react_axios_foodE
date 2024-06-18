@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+<<<<<<< HEAD
 package-lock.json
+=======
+//package-lock.json
+>>>>>>> 7f41e00127e9e79b37e5f4dcbc2d4b3eaba882ca
