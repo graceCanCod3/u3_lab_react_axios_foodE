@@ -16,7 +16,7 @@ export default function Seafood () {
     useEffect(()=>{
         const getSeafood = async () => {
             const response = await axios.get(`${BASE_URL}filter.php?c=Seafood`)
-            setSeafood(response.data.results)
+            setSeafood(response.data.meals)
         }
         getSeafood()
     }, [])
