@@ -2,6 +2,7 @@ import { Route, Routes} from 'react-router-dom'
 import Seafood from './Seafood'
 import Home from './Home'
 import Starter from './Starter'
+import Breakfast from './Breakfast'
 
 export default function Main () {
     return (
@@ -10,6 +11,7 @@ export default function Main () {
                 <Route path ="/" element = {<Home />}/>
                 <Route path ="/Seafood" element = {<Seafood />}/>
                 <Route path ="/Starters" element = {<Starter />}/>
+                <Route path ="/Breakfast" element = {<Breakfast />}/>
             </Routes>
         </div>
     )
