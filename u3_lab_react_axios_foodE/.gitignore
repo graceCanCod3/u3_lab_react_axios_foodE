@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
-//package-lock.json
+package-lock.json
+
+/home/gideoncove/ga/unit3/week2/u3_lab_react_axios_foodE/u3_lab_react_axios_foodE/package-lock.json
+
+package.json
+
+node_modules
 
