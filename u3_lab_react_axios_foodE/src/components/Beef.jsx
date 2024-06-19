@@ -13,7 +13,7 @@ export default function Beef () {
 
     useEffect (()=> {
         const getBeef = async () => {
-            const response = await axios.get(`${BASE_URL}filter.php?c=beef`)
+            const response = await axios.get(`${BASE_URL}filter.php?i=beef`)
             setBeefs(response.data.meals)
         }
         getBeef()
