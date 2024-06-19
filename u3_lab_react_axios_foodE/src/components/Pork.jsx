@@ -13,7 +13,7 @@ export default function Pork () {
 
     useEffect (()=> {
         const getPork = async () => {
-            const response = await axios.get(`${BASE_URL}filter.php?c=pork`)
+            const response = await axios.get(`${BASE_URL}filter.php?i=pork`)
             setPorks(response.data.meals)
         }
         getPork()

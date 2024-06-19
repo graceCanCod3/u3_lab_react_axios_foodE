@@ -13,7 +13,7 @@ export default function Poultry () {
 
     useEffect (()=> {
         const getPoultry = async () => {
-            const response = await axios.get(`${BASE_URL}filter.php?c=chicken`)
+            const response = await axios.get(`${BASE_URL}filter.php?i=chicken`)
             setPoultries(response.data.meals)
         }
         getPoultry()
