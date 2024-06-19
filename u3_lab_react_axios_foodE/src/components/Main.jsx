@@ -1,4 +1,6 @@
 import { Route, Routes} from 'react-router-dom'
+import React, {useContext} from 'react'
+import FoodContext from '../FoodContext'
 import Seafood from './Seafood'
 import Home from './Home'
 import Starter from './Starter'
