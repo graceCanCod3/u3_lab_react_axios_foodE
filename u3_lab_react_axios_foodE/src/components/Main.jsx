@@ -4,6 +4,7 @@ import Home from './Home'
 import Starter from './Starter'
 import Breakfast from './Breakfast'
 import Side from './Side'
+import Vegan from './Vegan'
 
 export default function Main () {
     return (
@@ -14,6 +15,7 @@ export default function Main () {
                 <Route path ="/Starters" element = {<Starter />}/>
                 <Route path ="/Breakfast" element = {<Breakfast />}/>
                 <Route path ="/Sides" element = {<Side />}/>
+                <Route path ="/Vegan" element = {<Vegan />}/>
             </Routes>
         </div>
     )

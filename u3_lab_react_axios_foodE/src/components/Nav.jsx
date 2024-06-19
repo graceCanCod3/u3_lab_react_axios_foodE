@@ -8,6 +8,7 @@ export default function Nav () {
             <Link to="/Starters"> Starters</Link>
             <Link to="/Breakfast"> Breakfast</Link>
             <Link to="/Sides"> Sides</Link>
+            <Link to="/Vegan"> Vegan </Link>
         </div>
     )
 }
