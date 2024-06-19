@@ -6,6 +6,7 @@ import Breakfast from './Breakfast'
 import Side from './Side'
 import Vegan from './Vegan'
 import Vegetarian from './Vegetarian'
+import Dessert from './Dessert'
 
 export default function Main () {
     return (
@@ -18,6 +19,7 @@ export default function Main () {
                 <Route path ="/Sides" element = {<Side />}/>
                 <Route path ="/Vegan" element = {<Vegan />}/>
                 <Route path ="/Vegetarian" element = {<Vegetarian />}/>
+                <Route path ="/Dessert" element = {<Dessert />}/>
             </Routes>
         </div>
     )
