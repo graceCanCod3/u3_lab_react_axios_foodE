@@ -12,6 +12,7 @@ export default function Nav () {
             <Link to="/Vegetarian"> Vegetarian </Link>
             <Link to="/Dessert"> Dessert</Link>
             <Link to="/Miscellaneous"> Miscellaneous </Link>
+            <Link to="/Pasta"> Pasta </Link>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import Vegan from './Vegan'
 import Vegetarian from './Vegetarian'
 import Dessert from './Dessert'
 import Miscellaneous from './Miscellaneous'
+import Pasta from './Pasta'
 
 export default function Main () {
     return (
@@ -22,6 +23,7 @@ export default function Main () {
                 <Route path ="/Vegetarian" element = {<Vegetarian />}/>
                 <Route path ="/Dessert" element = {<Dessert />}/>
                 <Route path ="/Miscellaneous" element = {<Miscellaneous />}/>
+                <Route path ="/Pasta" element = {<Pasta />}/>
             </Routes>
         </div>
     )
