@@ -1,4 +1,4 @@
-import { Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Seafood from './Seafood'
 import Home from './Home'
 import Starter from './Starter'
@@ -9,12 +9,19 @@ import Vegetarian from './Vegetarian'
 import Dessert from './Dessert'
 import Miscellaneous from './Miscellaneous'
 import Pasta from './Pasta'
-import CountryList from './CountryList'
-import CountryDetails from './CountryDetails'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
+import MealsByLetter from './MealsbyLetter'
+import AlphabetNav from './NavLink'
+
 
 export default function Main () {
+
     return (
         <div className = "Main-Container">
+            
+                <AlphabetNav/>
             <Routes>
                 <Route path ="/" element = {<Home />}/>
                 <Route path ="/Seafood" element = {<Seafood />}/>
@@ -26,9 +33,9 @@ export default function Main () {
                 <Route path ="/Dessert" element = {<Dessert />}/>
                 <Route path ="/Miscellaneous" element = {<Miscellaneous />}/>
                 <Route path ="/Pasta" element = {<Pasta />}/>
-                <Route path ="/countries" element={<CountryList/>}/>
-                <Route path ="/countries/:id" element={<CountryDetails/>}/>
+                <Route path="/meals/:letter" element={<MealsByLetter />} />
             </Routes>
+           
         </div>
     )
 }
