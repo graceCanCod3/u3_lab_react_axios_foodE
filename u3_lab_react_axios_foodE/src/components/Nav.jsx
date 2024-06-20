@@ -9,7 +9,7 @@ export default function Nav () {
             <Link to="/Beef"> Beef </Link>
             <Link to="/Pork"> Pork </Link>
             <Link to="/Seafood"> Seafood</Link>
-            <Link to="/Starters"> Starters</Link>
+            <Link to="/Starter"> Starters</Link>
             <Link to="/Breakfast"> Breakfast</Link>
             <Link to="/Sides"> Sides</Link>
             <Link to="/Vegan"> Vegan </Link>

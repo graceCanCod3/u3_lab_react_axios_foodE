@@ -24,6 +24,10 @@ import { BASE_URL } from '../globals'
 import CountryDetails from './components.details/CountryDetails'
 import CountryMeal from './components.details/CountryMeal'
 import BreakfastDetails from './components.details/BreakfastDetails'
+import SeafoodDetails from './components.details/SeafoodDetails'
+import SeafoodMeal from './components.details/components.meals/SeafoodMeal'
+import StarterDetails from './components.details/StarterDetails'
+import StarterMeal from './components.details/components.meals/StarterMeal'
 
 
 
@@ -46,13 +50,17 @@ export default function Main () {
             <Routes>
                 <Route path ="/" element = {<Home />}/>
                 <Route path ="/Seafood" element = {<Seafood />}/>
+                <Route path ="/Seafood/:mealId" element = {<SeafoodDetails/>}/>
+                <Route path ="/Seafood/Meal/:mealId" element = {<SeafoodMeal/>}/>
                 <Route path ="/Poultry" element = {<Poultry />}/>
                 <Route path ="/Poultry/:mealId" element = {<PoultryDetail />}/>
                 <Route path ="/Beef" element = {<Beef />}/>
                 <Route path ="/Beef/:mealId" element = {<BeefDetail />}/>
                 <Route path ="/Pork" element = {<Pork />}/>
                 <Route path ="/Pork/:mealId" element = {<PorkDetail />}/>
-                <Route path ="/Starters" element = {<Starter />}/>
+                <Route path ="/Starter" element = {<Starter />}/>
+                <Route path ="/Starter/:mealId" element = {<StarterDetails/>}/>
+                <Route path ="/Starter/Meal/:mealId" element = {<StarterMeal/>}/>
                 <Route path ="/Breakfast" element = {<Breakfast />}/>
                 <Route path ="/Breakfast/:mealId" element={<BreakfastDetails/>}/>
                 <Route path ="/Sides" element = {<Side />}/>
