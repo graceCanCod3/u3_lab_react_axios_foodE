@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 export default function Miscellaneous () {
     let navigate = useNavigate()
 
-    const showMisc = (index) => {
-        navigate(`${index}`)
+    const showMisc = (mealId) => {
+        navigate(`/Miscellaneous/${mealId}`)
     }
 
     const [miscs, setMiscs] = useState([])
@@ -25,7 +25,7 @@ export default function Miscellaneous () {
             <h1>Miscellaneous:</h1>
             {
                 miscs.map((misc, index) => (
-                    <div className="MiscDiv" onClick={()=>showMisc(index)} key = {index}>
+                    <div className="MiscDiv" onClick={()=>showMisc(misc.idMeal)} key = {index}>
                         <h3>{misc.strMeal}</h3>
                     </div>
                 ))

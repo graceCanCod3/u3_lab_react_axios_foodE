@@ -7,8 +7,8 @@ export default function side () {
 
     let navigate = useNavigate()
 
-    const showSide = (index) => {
-        navigate(`${index}`)
+    const showSide = (mealId) => {
+        navigate(`/Sides/${mealId}`)
     }
 
     const [sides, setSides] = useState([])
@@ -26,7 +26,7 @@ export default function side () {
             <h1> Sides:</h1>
             {
                 sides.map((side, index) => (
-                    <div className="SideDiv" onClick={()=>showSide(index)} key={index}>
+                    <div className="SideDiv" onClick={()=>showSide(side.idMeal)} key={index}>
                         <h3>{side.strMeal}</h3>
                     </div>
                 ))
