@@ -4,7 +4,7 @@ export default function Nav () {
     return (
         <div className="Nav">
             <Link to="/"> Home </Link>
-            <Link to="/Poultry"> Poultry</Link>
+            <Link to="/Poultry"> Poultry </Link>
             <Link to="/Beef"> Beef </Link>
             <Link to="/Pork"> Pork </Link>
             <Link to="/Seafood"> Seafood</Link>
