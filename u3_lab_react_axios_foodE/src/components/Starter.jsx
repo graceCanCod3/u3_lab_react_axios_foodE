@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 export default function Starter () {
     let navigate = useNavigate()
 
-    const showStarters = (index) => {
-        navigate(`${index}`)
+    const showStarters = (mealId) => {
+        navigate(`/Starter/${mealId}`)
     }
 
     const [starters, setStarters] = useState ([])
@@ -25,7 +25,7 @@ export default function Starter () {
             <h1>Starters</h1>
             {
                 starters.map((starter, index)=> (
-                    <div className="StarterDiv" onClick={()=>showStarters(index)} key = {index}>
+                    <div className="StarterDiv" onClick={()=>showStarters(starter.idMeal)} key = {index}>
                         <h3>{starter.strMeal}</h3>
                     </div>
                 ))
