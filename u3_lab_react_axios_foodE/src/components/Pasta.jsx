@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 export default function Pasta () {
     let navigate = useNavigate()
 
-    const showPasta = (index) => {
-        navigate(`${index}`)
+    const showPasta = (mealId) => {
+        navigate(`/Pasta/${mealId}`)
     }
 
     const [pastas, setpastas] = useState([])
@@ -27,7 +27,7 @@ export default function Pasta () {
             <h1>Pasta:</h1>
             {
                 pastas.map((pasta, index) => (
-                    <div className="PastaDiv" onClick={()=>showPasta(index)} key = {index}>
+                    <div className="PastaDiv" onClick={()=>showPasta(pasta.idMeal)} key = {index}>
                         <h3>{pasta.strMeal}</h3>
                         </div>
                 ))

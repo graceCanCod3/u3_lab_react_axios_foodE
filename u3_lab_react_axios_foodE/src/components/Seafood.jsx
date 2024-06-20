@@ -12,8 +12,8 @@ export default function Seafood () {
 
     let navigate = useNavigate()
 
-    const showSeafood = (index) => {
-        navigate(`${index}`)
+    const showSeafood = (mealId) => {
+        navigate(`/Seafood/${mealId}`)
     }
 
     const [seafoods, setSeafood] = useState([])
@@ -32,7 +32,7 @@ export default function Seafood () {
             <h1>Seafood:</h1>
             {
                 seafoods.map((seafood, index)=> (
-                    <div className="SeafoodDiv" onClick={()=>showSeafood(index)} key ={index}>
+                    <div className="SeafoodDiv" onClick={()=>showSeafood(seafood.idMeal)} key ={index}>
                         <h3>{seafood.strMeal}</h3>
                     </div>
                 ))

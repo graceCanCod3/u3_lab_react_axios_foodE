@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 export default function Dessert () {
     let navigate = useNavigate()
 
-    const showDessert = (index) => {
-        navigate(`${index}`)
+    const showDessert = (mealId) => {
+        navigate(`/Dessert/${mealId}`)
     }
 
     const [desserts, setDesserts] = useState([])
@@ -26,7 +26,7 @@ export default function Dessert () {
             <h1>Desserts:</h1>
             {
                 desserts.map((dessert,index)=> (
-                    <div className="DessertDiv" onClick ={()=>showDessert(index)} key = {index}>
+                    <div className="DessertDiv" onClick ={()=>showDessert(dessert.idMeal)} key = {index}>
                         <h3>{dessert.strMeal}</h3>
                     </div>
                 ))
