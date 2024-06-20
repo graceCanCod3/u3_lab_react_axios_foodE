@@ -37,7 +37,7 @@ const CountryMeal = ({ countries }) => {
     return (
         <div>
             {meal && meal.length > 0 ? (
-                <div className="meals-list">
+                <div className="meal-list">
                     {meal.map((mealItem) => (
                         <div key={mealItem.idMeal} className="meal-item">
                             <h3>{mealItem.strMeal}</h3>
