@@ -1,39 +1,44 @@
-import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useEffect, useState } from "react"
+import { useParams, useNavigate } from "react-router-dom"
 import axios from 'axios'
 import { BASE_URL } from '../../globals'
-import { ID_URL } from '../../globals'
 
-export default function BreakfastDetails (props) {
-    
 
-    const [recipe, setRecipe] = useState("")
-    console.log("props",props)
-    let url = ID_URL+props.recipeCode
-
-    let { id } = useParams()
-
-    
+const BreakfastDetails = ({ countries }) => {
+    let { mealId } = useParams()
+    const [meal, setMeal] = useState([])
 
     useEffect(() => {
-        const getRecipe = async () => {
-            const response = await axios.get(`${url}`)
-            setRecipe(response.data.meals)
+        const getBreakfastMeal = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}lookup.php?i=${mealId}`)
+                setMeal(response.data.meals)
+            } catch (error) {
+                console.error("Error fetching meals: ", error)
+            }
         }
-        getRecipe()
-    },[])
-    
-    
-    
+        getBreakfastMeal()
+    }, [mealId])
+
+    let navigate = useNavigate()
 
 
-    return recipe ? (
-        <div className="recipeDetail">
-            <h3>{recipe.strMeal}</h3>
-            <p>{recipe.strInstructions}</p>
-            <p>{recipe.strYoutube}</p>
-
+    return (
+        <div>
+            {meal && meal.length > 0 ? (
+                <div className="meals-list">
+                    {meal.map((meal) => (
+                        <div key={meal.idMeal} className="meal-item">
+                            <h3>{meal.strMeal}</h3>
+                            <img src={meal.strMealThumb} alt={meal.strMeal} />
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <p>No meals found for.</p>
+            )}
         </div>
-    ) : null
+    )
 }
 
+export default BreakfastDetails

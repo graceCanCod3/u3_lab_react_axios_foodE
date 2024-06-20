@@ -18,8 +18,9 @@ import Countries from './Countries'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
-import CountryDetails from './CountryDetails'
-import CountryMeal from './CountryMeal'
+import CountryDetails from './components.details/CountryDetails'
+import CountryMeal from './components.details/CountryMeal'
+import BreakfastDetails from './components.details/BreakfastDetails'
 
 
 
@@ -47,6 +48,7 @@ export default function Main () {
                 <Route path ="/Pork" element = {<Pork />}/>
                 <Route path ="/Starters" element = {<Starter />}/>
                 <Route path ="/Breakfast" element = {<Breakfast />}/>
+                <Route path ="/Breakfast/:mealId" element={<BreakfastDetails/>}/>
                 <Route path ="/Sides" element = {<Side />}/>
                 <Route path ="/Vegan" element = {<Vegan />}/>
                 <Route path ="/Vegetarian" element = {<Vegetarian />}/>
