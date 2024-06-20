@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import axios from 'axios'
-import { BASE_URL } from "../../globals"
+import { BASE_URL } from "../globals"
 
 
 
-const PorkDetail = () => {
+const PoultryDetail = () => {
     let { mealId } = useParams()
     const [meal, setMeal] = useState([])
 
@@ -41,4 +41,4 @@ const PorkDetail = () => {
     )
 }
 
-export default PorkDetail
+export default PoultryDetail
