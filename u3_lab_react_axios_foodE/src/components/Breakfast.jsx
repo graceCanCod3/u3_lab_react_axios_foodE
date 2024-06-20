@@ -7,8 +7,8 @@ import { BASE_URL } from '../globals'
 export default function Breakfast () {
     let navigate = useNavigate()
 
-    const showBreakfast = (index) => {
-        navigate(`${index}`)
+    const showBreakfast = (mealId) => {
+        navigate(`/Breakfast/${mealId}`)
     }
 
     const [breakfasts, setBreakfasts] = useState([])
@@ -26,7 +26,7 @@ export default function Breakfast () {
             <h1>Breakfast:</h1>
             {
                 breakfasts.map((breakfast,index)=> (
-                    <div className="BreakfastDiv" onClick={()=>showBreakfast(index)} key = {index}>
+                    <div className="BreakfastDiv" onClick={()=>showBreakfast(breakfast.idMeal)} key = {index}>
                         <h3>{breakfast.strMeal}</h3>
                     </div>
                 ))

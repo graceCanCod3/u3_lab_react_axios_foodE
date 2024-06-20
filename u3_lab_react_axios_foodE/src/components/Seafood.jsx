@@ -2,8 +2,13 @@ import axios from "axios"
 import {useState, useEffect } from "react"
 import { BASE_URL } from '../globals'
 import { useNavigate } from "react-router-dom"
+import React, {useContext} from 'react'
+import FoodContext from "../FoodContext"
 
 export default function Seafood () {
+
+    const {foodInfo, setFoodInfo} = useContext(FoodContext)
+    console.log('Seafood', foodInfo)
 
     let navigate = useNavigate()
 
