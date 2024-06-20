@@ -10,7 +10,7 @@ export default function Nav () {
             <Link to="/Beef" className='nav-item'> Beef </Link>
             <Link to="/Pork" className='nav-item'> Pork </Link>
             <Link to="/Seafood"className='nav-item'> Seafood</Link>
-            <Link to="/Starters"className='nav-item'> Starters</Link>
+            <Link to="/Starter"className='nav-item'> Starters</Link>
             <Link to="/Breakfast"className='nav-item'> Breakfast</Link>
             <Link to="/Sides"className='nav-item'> Sides</Link>
             <Link to="/Vegan"className='nav-item'> Vegan </Link>
