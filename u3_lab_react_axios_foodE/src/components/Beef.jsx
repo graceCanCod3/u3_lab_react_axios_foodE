@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom"
 
 export default function Beef () {
     let navigate = useNavigate()
-    const showBeef = (index) => {
-        navigate(`${index}`)
+    const showBeef = (mealName) => {
+        navigate(`/Beef/${mealName}`)
     }
 
     const [beefs, setBeefs] = useState([])
@@ -24,8 +24,9 @@ export default function Beef () {
             <h1>Protein Type: Beef</h1>
             {
                 beefs.map((beef,index)=> (
-                    <div className="beef" onClick={()=>showBeef(index)} key = {index}>
-                        <h3>{beef.strMeal}</h3>
+                    <div className="beef" onClick={()=>showBeef(beef.idMeal)} key = {index}>
+                        <h2>{beef.strMeal}</h2>
+                        <img src={beef.strMealThumb} alt={beef.strMeal} />
                     </div>
                 ))
             }
