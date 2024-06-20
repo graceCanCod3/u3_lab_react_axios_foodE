@@ -25,12 +25,12 @@ const CountryMeal = ({ countries }) => {
         <div>
             {meal && meal.length > 0 ? (
                 <div className="meals-list">
-                    {meal.map((meal) => (
-                        <div key={meal.idMeal} className="meal-item">
-                            <h3>{meal.strMeal}</h3>
-                            <img src={meal.strMealThumb} alt={meal.strMeal} />
-                            <p>{meal.strYoutube}</p>
-                            <p>{meal.strInstructions}</p>
+                    {meal.map((mealItem) => (
+                        <div key={mealItem.idMeal} className="meal-item">
+                            <h3>{mealItem.strMeal}</h3>
+                            <img src={mealItem.strMealThumb} alt={meal.strMeal} />
+                            <p>{mealItem.strYoutube}</p>
+                            <p>{mealItem.strInstructions}</p>
                         </div>
                     ))}
                 </div>
