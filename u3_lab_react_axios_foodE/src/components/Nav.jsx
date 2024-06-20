@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav () {
     return (
         <div className="Nav">
+            <NavLink/>
             <Link to="/"> Home </Link>
             <Link to="/Poultry"> Poultry </Link>
             <Link to="/Beef"> Beef </Link>
@@ -16,6 +17,7 @@ export default function Nav () {
             <Link to="/Dessert"> Dessert</Link>
             <Link to="/Miscellaneous"> Miscellaneous </Link>
             <Link to="/Pasta"> Pasta </Link>
+            <Link to='/country'>Countries</Link>
         </div>
     )
 }

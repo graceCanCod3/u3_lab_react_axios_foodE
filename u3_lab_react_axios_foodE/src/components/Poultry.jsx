@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom"
 
 export default function Poultry () {
     let navigate = useNavigate()
-    const showPoultry = (index) => {
-        navigate(`${index}`)
+    const showPoultry = (mealName) => {
+        navigate(`/Poultry/${mealName}`)
     }
 
     const [poultries, setPoultries] = useState([])
@@ -24,8 +24,9 @@ export default function Poultry () {
             <h1>Protein Type: Chicken</h1>
             {
                 poultries.map((poultry,index)=> (
-                    <div className="poultry" onClick={()=>showPoultry(index)} key = {index}>
-                        <h3>{poultry.strMeal}</h3>
+                    <div className="poultry" onClick={()=>showPoultry(poultry.idMeal)} key = {index}>
+                        <h2>{poultry.strMeal}</h2>
+                        <img src={poultry.strMealThumb} alt={poultry.strMeal} />
                     </div>
                 ))
             }
