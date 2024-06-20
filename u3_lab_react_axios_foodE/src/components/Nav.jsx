@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav () {
     return (
         <div className="Nav">
+            <NavLink/>
             <Link to="/"> Home </Link>
             <Link to="/Poultry"> Poultry </Link>
             <Link to="/Beef"> Beef </Link>

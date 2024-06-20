@@ -12,10 +12,13 @@ import Pasta from './Pasta'
 import Poultry from './Poultry'
 import Beef from './Beef'
 import Pork from './Pork'
+import MealsByLetter from './MealsbyLetter'
+import  NavLink  from './NavLink'
 
 export default function Main () {
     return (
         <div className = "Main-Container">
+            <NavLink/>
             <Routes>
                 <Route path ="/" element = {<Home />}/>
                 <Route path ="/Seafood" element = {<Seafood />}/>
@@ -30,6 +33,7 @@ export default function Main () {
                 <Route path ="/Dessert" element = {<Dessert />}/>
                 <Route path ="/Miscellaneous" element = {<Miscellaneous />}/>
                 <Route path ="/Pasta" element = {<Pasta />}/>
+                <Route path='/meals/:letter' element={<MealsByLetter/>}/>
             </Routes>
         </div>
     )
