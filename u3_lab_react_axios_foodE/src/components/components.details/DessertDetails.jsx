@@ -21,6 +21,9 @@ const DessertDetails = ({ countries }) => {
     }, [mealId])
 
     let navigate = useNavigate()
+    const showMeal = (mealId) => {
+        navigate(`/Dessert/meal/${mealId}`)
+    }
 
 
     return (
@@ -28,7 +31,7 @@ const DessertDetails = ({ countries }) => {
             {meal && meal.length > 0 ? (
                 <div className="meals-list">
                     {meal.map((meal) => (
-                        <div key={meal.idMeal} className="meal-item">
+                        <div onClick={()=> showMeal(meal.idMeal)}key={meal.idMeal} className="meal-item">
                             <h3>{meal.strMeal}</h3>
                             <img src={meal.strMealThumb} alt={meal.strMeal} />
                         </div>

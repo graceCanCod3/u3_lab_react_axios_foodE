@@ -7,8 +7,8 @@ export default function Vegetarian () {
 
     let navigate = useNavigate()
 
-    const showVegetarian = (index) => {
-        navigate(`${index}`)
+    const showVegetarian = (mealId) => {
+        navigate(`/Vegetarian/${mealId}`)
     }
 
     const [vegetarian, setVegetarian] = useState([])
@@ -26,7 +26,7 @@ export default function Vegetarian () {
             <h1>Vegetarian food:</h1>
             {
                 vegetarian.map((vege,index)=> (
-                    <div className="VegetarianDiv" onClick={()=>showVegetarian(index)} key = {index}>
+                    <div className="VegetarianDiv" onClick={()=>showVegetarian(vege.idMeal)} key = {index}>
                         <h3>{vege.strMeal}</h3>
                     </div>
                 ))

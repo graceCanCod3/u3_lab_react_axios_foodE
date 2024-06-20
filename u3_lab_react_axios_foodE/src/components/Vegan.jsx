@@ -5,8 +5,8 @@ import { BASE_URL } from '../globals'
 
 export default function Vegan () {
     let navigate = useNavigate()
-    const showVegan = (index) => {
-        navigate(`${index}`)
+    const showVegan = (mealId) => {
+        navigate(`/Vegan/${mealId}`)
     }
 
     const [vegans, setVegans] = useState([])
@@ -24,7 +24,7 @@ export default function Vegan () {
             <h1>Vegan food:</h1>
             {
                 vegans.map((vegan,index)=> (
-                    <div className="VeganDiv" onClick={()=>showVegan(index)} key = {index}>
+                    <div className="VeganDiv" onClick={()=>showVegan(vegan.idMeal)} key = {index}>
                         <h3>{vegan.strMeal}</h3>
                     </div>
                 ))
