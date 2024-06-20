@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import '../Alphabet.css'
 
 const MealsByLetter = () => {
     let { letter } = useParams()
@@ -24,10 +25,9 @@ const MealsByLetter = () => {
             <h1>Meals starting with "{letter.toUpperCase()}"</h1>
             {meals ? (
                 meals.map((meal, index) => (
-                    <div key={index} className="meal-item">
+                    <div key={index} className="meals-item">
                         <h3>{meal.strMeal}</h3>
                         <img src={meal.strMealThumb} alt={meal.strMeal} />
-                        <p>{meal.strInstructions}</p>
                     </div>
                 ))
             ) : (

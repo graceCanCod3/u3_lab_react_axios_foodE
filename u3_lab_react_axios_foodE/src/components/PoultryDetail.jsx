@@ -27,7 +27,7 @@ const PoultryDetail = () => {
                 <div className="meals-list">
                     {meal.map((meal) => (
                         <div key={meal.idMeal} className="meal-item">
-                            <h3>{meal.strMeal}</h3>
+                            <h2 className="meal-name">{meal.strMeal}</h2>
                             <img src={meal.strMealThumb} alt={meal.strMeal} />
                             <a href={meal.strYoutube}>{meal.strYoutube}</a>
                             <p>{meal.strInstructions}</p>

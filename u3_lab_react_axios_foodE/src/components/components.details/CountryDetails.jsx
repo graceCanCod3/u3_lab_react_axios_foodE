@@ -28,12 +28,12 @@ const CountryDetails = ({ countries }) => {
 
     return (
         <div>
-            <h1>Meals from {countryName}</h1>
+            <h1 className="country-meals-header">{countryName} Meals</h1>
             {meals && meals.length > 0 ? (
                 <div className="meals-list">
                     {meals.map((meal) => (
-                        <div onClick={()=> showMeal(meal.idMeal)}key={meal.idMeal} className="meal-item">
-                            <h3>{meal.strMeal}</h3>
+                        <div onClick={()=> showMeal(meal.idMeal)}key={meal.idMeal} className="meals-item">
+                            <h3 className="meal-name">{meal.strMeal}</h3>
                             <img src={meal.strMealThumb} alt={meal.strMeal} />
                         </div>
                     ))}
