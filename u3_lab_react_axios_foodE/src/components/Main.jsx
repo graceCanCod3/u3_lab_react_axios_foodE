@@ -14,8 +14,28 @@ import Beef from './Beef'
 import Pork from './Pork'
 import MealsByLetter from './MealsbyLetter'
 import  NavLink  from './NavLink'
+import Countries from './Countries'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
+import CountryDetails from './CountryDetails'
+import CountryMeal from './CountryMeal'
+
+
 
 export default function Main () {
+
+    const [countries, setCountries] = useState([])
+
+    useEffect(()=> {
+        const getCountries = async () => {
+            const response = await axios.get(`${BASE_URL}list.php?a=list`)
+            setCountries(response.data.meals)               
+
+        }
+        getCountries()
+    },[])
+
     return (
         <div className = "Main-Container">
             <NavLink/>
@@ -34,6 +54,9 @@ export default function Main () {
                 <Route path ="/Miscellaneous" element = {<Miscellaneous />}/>
                 <Route path ="/Pasta" element = {<Pasta />}/>
                 <Route path='/meals/:letter' element={<MealsByLetter/>}/>
+                <Route path='/country' element={<Countries countries={countries}/>}/>
+                <Route path='/country/:countryName' element={<CountryDetails countries={countries}/>}/>
+                <Route path='/country/meal/:mealId' element={<CountryMeal/>}/>
             </Routes>
         </div>
     )
