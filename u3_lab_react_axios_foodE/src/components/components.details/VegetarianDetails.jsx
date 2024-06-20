@@ -1,25 +1,27 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import axios from 'axios'
-import { BASE_URL } from '../globals'
-import { ID_URL } from "../globals"
+import { BASE_URL } from '../../globals'
 
 
-const CountryMeal = ({ countries }) => {
+const VegetarianDetails = ({ countries }) => {
     let { mealId } = useParams()
     const [meal, setMeal] = useState([])
 
     useEffect(() => {
-        const getMeal = async () => {
+        const getVegetarianMeal = async () => {
             try {
-                const response = await axios.get(`${ID_URL}${mealId}`)
+                const response = await axios.get(`${BASE_URL}lookup.php?i=${mealId}`)
                 setMeal(response.data.meals)
             } catch (error) {
                 console.error("Error fetching meals: ", error)
             }
         }
-        getMeal()
+        getVegetarianMeal()
     }, [mealId])
+
+    let navigate = useNavigate()
+
 
     return (
         <div>
@@ -29,16 +31,14 @@ const CountryMeal = ({ countries }) => {
                         <div key={meal.idMeal} className="meal-item">
                             <h3>{meal.strMeal}</h3>
                             <img src={meal.strMealThumb} alt={meal.strMeal} />
-                            <p>{meal.strYoutube}</p>
-                            <p>{meal.strInstructions}</p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <p>No meals found for .</p>
+                <p>No meals found for.</p>
             )}
         </div>
     )
 }
 
-export default CountryMeal
+export default VegetarianDetails

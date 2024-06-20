@@ -4,12 +4,12 @@ import axios from 'axios'
 import { BASE_URL } from '../../globals'
 
 
-const BreakfastDetails = ({ countries }) => {
+const DessertDetails = ({ countries }) => {
     let { mealId } = useParams()
     const [meal, setMeal] = useState([])
 
     useEffect(() => {
-        const getBreakfastMeal = async () => {
+        const getDessertMeal = async () => {
             try {
                 const response = await axios.get(`${BASE_URL}lookup.php?i=${mealId}`)
                 setMeal(response.data.meals)
@@ -17,7 +17,7 @@ const BreakfastDetails = ({ countries }) => {
                 console.error("Error fetching meals: ", error)
             }
         }
-        getBreakfastMeal()
+        getDessertMeal()
     }, [mealId])
 
     let navigate = useNavigate()
@@ -41,4 +41,4 @@ const BreakfastDetails = ({ countries }) => {
     )
 }
 
-export default BreakfastDetails
+export default DessertDetails
